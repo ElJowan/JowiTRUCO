@@ -1,0 +1,52 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+using System.Threading.Tasks.Sources;
+
+namespace JowiTRUCO.Class
+{
+    class Players
+    {
+        public Players(string name)
+        {
+            this.Name = name;
+        }
+        private string Name { get; set; }
+        private int Score { get; set; }
+        private int[] Cards { get; set; } = new int[3];
+        private bool Hand { get; set; } = false;
+        public void SetCards()
+        {
+            Random rand = new Random(); // Generador de numeros aleatorios
+            for (int i = 0; i < 3; i++)
+            {
+                Cards[i] = rand.Next(1, 41); // Genera numeros entre 1 y 40
+            }
+        }
+        public int[] getCards()
+        {
+            return Cards;
+        }
+        public string getName() 
+        {
+            return Name; 
+        }
+        public int getScore()
+        {
+            return Score;
+        }
+        public void setHand(bool hand)
+        {
+            Hand = hand;
+        }
+        public bool getHand()
+        {
+            return Hand;
+        }
+        
+
+    }
+}
