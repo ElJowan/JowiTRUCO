@@ -18,9 +18,7 @@ class Program
         if (reglas == 1)
         {
             Console.WriteLine("PROXIMAMENTE REGLAS");
-            Console.WriteLine("Presione cualquier tecla para continuar");
-            Console.ReadKey();
-            Console.Clear();
+            escribirConsola("Presione cualquier tecla para continuar");
         }
 
         Console.WriteLine("Ingrese el nombre del jugador 1");
@@ -32,9 +30,7 @@ class Program
         Console.Clear();
         Console.WriteLine("Bienvenidos " + jugadorUNO.getName() + " Y " + jugadorDOS.getName());
         Console.WriteLine("ESTAMOS LISTO PARA EMPEZAR???");
-        Console.WriteLine("Presione cualquier tecla para continuar");
-        Console.ReadKey();
-        Console.Clear();
+        escribirConsola("Presione cualquier tecla para continuar");
 
         while (jugadorUNO.getScore() < 15 || jugadorDOS.getScore() < 15)
         {
@@ -49,9 +45,7 @@ class Program
                     Console.WriteLine(jugadorUNO.getName() + " ES MANO");
                     jugadorUNO.setHand(true);
                     Console.WriteLine(jugadorDOS.getName() + " Cierre los ojos es el turno de " + jugadorUNO.getName());
-                    Console.WriteLine("Presione cualquier tecla para continuar");
-                    Console.ReadKey();
-                    Console.Clear();
+                    escribirConsola("Presione cualquier tecla para continuar");
                     Console.WriteLine("Las cartas de " + jugadorUNO.getName() + " son: ");
                     if (repartido1 == true)
                     {
@@ -71,9 +65,7 @@ class Program
                     Console.Clear();
 
                     Console.WriteLine(jugadorUNO.getName() + " Cierre los ojos es el turno de " + jugadorDOS.getName());
-                    Console.WriteLine("Presione cualquier tecla para continuar");
-                    Console.ReadKey();
-                    Console.Clear();
+                    escribirConsola("Presione cualquier tecla para continuar");
                     Console.WriteLine("Las cartas de " + jugadorDOS.getName() + " son: ");
                     if (repartido2 == true)
                     {
@@ -96,9 +88,7 @@ class Program
                     Console.WriteLine(jugadorDOS.getName() + " ES MANO");
                     jugadorDOS.setHand(true);
                     Console.WriteLine(jugadorUNO.getName() + " Cierre los ojos es el turno de " + jugadorDOS.getName());
-                    Console.WriteLine("Presione cualquier tecla para continuar");
-                    Console.ReadKey();
-                    Console.Clear();
+                    escribirConsola("Presione cualquier tecla para continuar");
                     Console.WriteLine("Las cartas de " + jugadorDOS.getName() + " son: ");
                     if (repartido2 == true)
                     {
@@ -118,9 +108,7 @@ class Program
                     Console.Clear();
 
                     Console.WriteLine(jugadorDOS.getName() + " Cierre los ojos es el turno de " + jugadorUNO.getName());
-                    Console.WriteLine("Presione cualquier tecla para continuar");
-                    Console.ReadKey();
-                    Console.Clear();
+                    escribirConsola("Presione cualquier tecla para continuar");
                     Console.WriteLine("Las cartas de " + jugadorUNO.getName() + " son: ");
                     if (repartido2 == true)
                     {
