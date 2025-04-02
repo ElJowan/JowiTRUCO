@@ -14,6 +14,7 @@ namespace JowiTRUCO.Class
         {
             this.Name = name;
         }
+        private int Wins { get; set;} = 0;
         private string Name { get; set; }
         private int Score { get; set; }
         private int[] Cards { get; set; } = new int[3];
@@ -38,15 +39,27 @@ namespace JowiTRUCO.Class
         {
             return Score;
         }
-        public void setHand(bool hand)
+        public void setHand(bool Hand)
         {
-            Hand = hand;
+            this.Hand = Hand;
         }
         public bool getHand()
         {
             return Hand;
         }
-        
+        public void deleteCard(int position)
+        {
+            this.Cards[position - 1] = 0;
+        }
 
+        public void addWin()
+        {
+            this.Wins ++;
+        }
+
+        public void resetWins()
+        {
+            this.Wins = 0;
+        }
     }
 }
