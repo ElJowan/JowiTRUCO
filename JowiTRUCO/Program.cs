@@ -322,7 +322,7 @@ class Program
         }
         for(int i = 0; i < 3; i++)
         {
-            verCarta += carta[i] + "\n";
+            verCarta +=  String.Concat(i + 1 + ") ", carta[i]) + "\n";
         }
         return verCarta;
 
