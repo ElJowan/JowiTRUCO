@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace JowiTRUCO.TEEC
 {
-    //public class Nombres{
+    class Puntaje
+    {
     //    public punto (int[] cartas)
     //    {
           
     //    }
-    //}
+    }
 }

@@ -136,8 +136,8 @@ class Program
 
                         //}
                     }
-                        Console.ReadKey();
-                        Console.Clear();
+                    Console.ReadKey();
+                    Console.Clear();
                     repartido2 = false;
                 }
             }
