@@ -7,7 +7,6 @@ class Program
     static void Main(string[] args)
     {
         int reglas = 0;
-        int cont = 0;
         int eliminarCarta = 0;
         bool repartido1 = true, repartido2 = true;
 
@@ -142,8 +141,14 @@ class Program
                     repartido2 = false;
                 }
             }
-            cont++;
         }
+    }
+
+    static void escribirConsola(string word)
+    {
+        Console.WriteLine(word);
+        Console.ReadKey();
+        Console.Clear();
     }
 
     static string valoresC(int[] cartas)
@@ -334,5 +339,4 @@ class Program
         return verCarta;
 
     }
-
 }
