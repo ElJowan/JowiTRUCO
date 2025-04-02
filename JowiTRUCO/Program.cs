@@ -45,154 +45,101 @@ class Program
             repartido2 = true;
             for (int i = 0; i < 3; i++)
             {
-                if ((cont % 2) == 0)
+                if ((i % 2) == 0)
                 {
+                    Console.WriteLine(jugadorUNO.getName() + " ES MANO");
+                    jugadorUNO.setHand(true);
+                    Console.WriteLine(jugadorDOS.getName() + " Cierre los ojos es el turno de " + jugadorUNO.getName());
+                    Console.WriteLine("Presione cualquier tecla para continuar");
+                    Console.ReadKey();
+                    Console.Clear();
+                    Console.WriteLine("Las cartas de " + jugadorUNO.getName() + " son: ");
                     if (repartido1 == true)
                     {
-                        Console.WriteLine(jugadorUNO.getName() + " ES MANO");
-                        jugadorUNO.setHand(true);
-                        Console.WriteLine(jugadorDOS.getName() + " Cierre los ojos es el turno de " + jugadorUNO.getName());
-                        Console.WriteLine("Presione cualquier tecla para continuar");
-                        Console.ReadKey();
-                        Console.Clear();
-                        Console.WriteLine("Las cartas de " + jugadorUNO.getName() + " son: ");
                         jugadorUNO.SetCards();
                         Console.WriteLine(valoresC(jugadorUNO.getCards()));
-                        //Console.WriteLine("Que carta quieres tirar? seleccionalas con 1, 2 o 3");
-                        //eliminarCarta = int.Parse(Console.ReadLine());
-                        //if (eliminarCarta == 1)
-                        //{
-
-                        //}
-                        Console.ReadKey();
-                        Console.Clear();
-
-                        Console.WriteLine(jugadorUNO.getName() + " Cierre los ojos es el turno de " + jugadorDOS.getName());
-                        Console.WriteLine("Presione cualquier tecla para continuar");
-                        Console.ReadKey();
-                        Console.Clear();
-                        Console.WriteLine("Las cartas de " + jugadorDOS.getName() + " son: ");
-                        jugadorDOS.SetCards();
-                        Console.WriteLine(valoresC(jugadorDOS.getCards()));
-                        //Console.WriteLine("Que carta quieres tirar? seleccionalas con 1, 2 o 3");
-                        //eliminarCarta = int.Parse(Console.ReadLine());
-                        //if (eliminarCarta == 1)
-                        //{
-
-                        //}
-                        Console.ReadKey();
-                        Console.Clear();
-                        repartido1 = false;
                     }
                     else
                     {
-                        Console.WriteLine(jugadorUNO.getName() + " ES MANO");
-                        jugadorUNO.setHand(true);
-                        Console.WriteLine(jugadorDOS.getName() + " Cierre los ojos es el turno de " + jugadorUNO.getName());
-                        Console.WriteLine("Presione cualquier tecla para continuar");
-                        Console.ReadKey();
-                        Console.Clear();
-                        Console.WriteLine("Las cartas de " + jugadorUNO.getName() + " son: ");
-                        ///MOSTRAR CARTAS RESTANTES.
                         //Console.WriteLine("Que carta quieres tirar? seleccionalas con 1, 2 o 3");
                         //eliminarCarta = int.Parse(Console.ReadLine());
                         //if (eliminarCarta == 1)
                         //{
 
                         //}
-                        Console.ReadKey();
-                        Console.Clear();
-
-                        Console.WriteLine(jugadorUNO.getName() + " Cierre los ojos es el turno de " + jugadorDOS.getName());
-                        Console.WriteLine("Presione cualquier tecla para continuar");
-                        Console.ReadKey();
-                        Console.Clear();
-                        Console.WriteLine("Las cartas de " + jugadorDOS.getName() + " son: ");
-                        ///MOSTRAR CARTAS RESTANTES.
-                        //Console.WriteLine("Que carta quieres tirar? seleccionalas con 1, 2 o 3");
-                        //eliminarCarta = int.Parse(Console.ReadLine());
-                        //if (eliminarCarta == 1)
-                        //{
-
-                        //}
-                        Console.ReadKey();
-                        Console.Clear();
                     }
+                    Console.ReadKey();
+                    Console.Clear();
+
+                    Console.WriteLine(jugadorUNO.getName() + " Cierre los ojos es el turno de " + jugadorDOS.getName());
+                    Console.WriteLine("Presione cualquier tecla para continuar");
+                    Console.ReadKey();
+                    Console.Clear();
+                    Console.WriteLine("Las cartas de " + jugadorDOS.getName() + " son: ");
+                    if (repartido2 == true)
+                    {
+                        jugadorDOS.SetCards();
+                        Console.WriteLine(valoresC(jugadorDOS.getCards()));
+                    }
+                    //Console.WriteLine("Que carta quieres tirar? seleccionalas con 1, 2 o 3");
+                    //eliminarCarta = int.Parse(Console.ReadLine());
+                    //if (eliminarCarta == 1)
+                    //{
+
+                    //}
+                    Console.ReadKey();
+                    Console.Clear();
+                    repartido1 = false;
                 }
                 else
                 {
+                    jugadorUNO.setHand(false);
+                    Console.WriteLine(jugadorDOS.getName() + " ES MANO");
+                    jugadorDOS.setHand(true);
+                    Console.WriteLine(jugadorUNO.getName() + " Cierre los ojos es el turno de " + jugadorDOS.getName());
+                    Console.WriteLine("Presione cualquier tecla para continuar");
+                    Console.ReadKey();
+                    Console.Clear();
+                    Console.WriteLine("Las cartas de " + jugadorDOS.getName() + " son: ");
                     if (repartido2 == true)
                     {
-                        jugadorUNO.setHand(false);
-                        Console.WriteLine(jugadorDOS.getName() + " ES MANO");
-                        jugadorDOS.setHand(true);
-                        Console.WriteLine(jugadorUNO.getName() + " Cierre los ojos es el turno de " + jugadorDOS.getName());
-                        Console.WriteLine("Presione cualquier tecla para continuar");
-                        Console.ReadKey();
-                        Console.Clear();
-                        Console.WriteLine("Las cartas de " + jugadorDOS.getName() + " son: ");
                         jugadorDOS.SetCards();
                         Console.WriteLine(valoresC(jugadorDOS.getCards()));
-                        //Console.WriteLine("Que carta quieres tirar? seleccionalas con 1, 2 o 3");
-                        //eliminarCarta = int.Parse(Console.ReadLine());
-                        //if (eliminarCarta == 1)
-                        //{
-
-                        //}
-                        Console.ReadKey();
-                        Console.Clear();
-
-                        Console.WriteLine(jugadorDOS.getName() + " Cierre los ojos es el turno de " + jugadorUNO.getName());
-                        Console.WriteLine("Presione cualquier tecla para continuar");
-                        Console.ReadKey();
-                        Console.Clear();
-                        Console.WriteLine("Las cartas de " + jugadorUNO.getName() + " son: ");
-                        jugadorUNO.SetCards();
-                        Console.WriteLine(valoresC(jugadorUNO.getCards()));
-                        //Console.WriteLine("Que carta quieres tirar? seleccionalas con 1, 2 o 3");
-                        //eliminarCarta = int.Parse(Console.ReadLine());
-                        //if (eliminarCarta == 1)
-                        //{
-
-                        //}
-                        Console.ReadKey();
-                        Console.Clear();
                     }
                     else
                     {
-                        jugadorUNO.setHand(false);
-                        Console.WriteLine(jugadorDOS.getName() + " ES MANO");
-                        jugadorDOS.setHand(true);
-                        Console.WriteLine(jugadorUNO.getName() + " Cierre los ojos es el turno de " + jugadorDOS.getName());
-                        Console.WriteLine("Presione cualquier tecla para continuar");
-                        Console.ReadKey();
-                        Console.Clear();
-                        Console.WriteLine("Las cartas de " + jugadorDOS.getName() + " son: ");
-                        ///MOSTRAR CARTAS RESTANTES.
                         //Console.WriteLine("Que carta quieres tirar? seleccionalas con 1, 2 o 3");
                         //eliminarCarta = int.Parse(Console.ReadLine());
                         //if (eliminarCarta == 1)
                         //{
 
                         //}
-                        Console.ReadKey();
-                        Console.Clear();
-
-                        Console.WriteLine(jugadorDOS.getName() + " Cierre los ojos es el turno de " + jugadorUNO.getName());
-                        Console.WriteLine("Presione cualquier tecla para continuar");
-                        Console.ReadKey();
-                        Console.Clear();
-                        Console.WriteLine("Las cartas de " + jugadorUNO.getName() + " son: ");
-                        ///MOSTRAR CARTAS RESTANTES.
-                        //Console.WriteLine("Que carta quieres tirar? seleccionalas con 1, 2 o 3");
-                        //eliminarCarta = int.Parse(Console.ReadLine());
-                        //if (eliminarCarta == 1)
-                        //{
-
-                        //}
-                        Console.ReadKey();
-                        Console.Clear();
                     }
+                    Console.ReadKey();
+                    Console.Clear();
+
+                    Console.WriteLine(jugadorDOS.getName() + " Cierre los ojos es el turno de " + jugadorUNO.getName());
+                    Console.WriteLine("Presione cualquier tecla para continuar");
+                    Console.ReadKey();
+                    Console.Clear();
+                    Console.WriteLine("Las cartas de " + jugadorUNO.getName() + " son: ");
+                    if (repartido2 == true)
+                    {
+                        jugadorUNO.SetCards();
+                        Console.WriteLine(valoresC(jugadorUNO.getCards()));
+                    }
+                    else
+                    {
+                        //Console.WriteLine("Que carta quieres tirar? seleccionalas con 1, 2 o 3");
+                        //eliminarCarta = int.Parse(Console.ReadLine());
+                        //if (eliminarCarta == 1)
+                        //{
+
+                        //}
+                    }
+                        Console.ReadKey();
+                        Console.Clear();
+                    repartido2 = false;
                 }
             }
             cont++;
