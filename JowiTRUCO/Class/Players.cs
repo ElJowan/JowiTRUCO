@@ -21,10 +21,10 @@ namespace JowiTRUCO.Class
         private bool Hand { get; set; } = false;
         public void SetCards()
         {
-            Random rand = new Random(); // Generador de numeros aleatorios
+            Random rand = new Random();
             for (int i = 0; i < 3; i++)
             {
-                Cards[i] = rand.Next(1, 41); // Genera numeros entre 1 y 40
+                Cards[i] = rand.Next(1, 41);
             }
         }
         public int[] getCards()
@@ -51,12 +51,10 @@ namespace JowiTRUCO.Class
         {
             this.Cards[position - 1] = 0;
         }
-
         public void addWin()
         {
             this.Wins ++;
         }
-
         public void resetWins()
         {
             this.Wins = 0;
